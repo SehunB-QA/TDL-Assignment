@@ -1,5 +1,5 @@
 package com.qa.tdlassignmentbackend.dtos;
 
-public class ItemDTO {
+public class ToDoListDTO {
 
 }

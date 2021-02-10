@@ -1,5 +1,5 @@
 package com.qa.tdlassignmentbackend.controller;
 
-public class ShoppingListController {
+public class TasksController {
 
 }

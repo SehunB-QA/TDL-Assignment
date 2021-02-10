@@ -1,5 +1,5 @@
 package com.qa.tdlassignmentbackend.persistence.repo;
 
-public interface ShoppingListRepo {
+public interface ToDoListRepo {
 
 }

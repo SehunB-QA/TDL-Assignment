@@ -1,5 +1,5 @@
 package com.qa.tdlassignmentbackend.persistence.domain;
 
-public class ShoppingList {
+public class ToDoList {
 
 }
