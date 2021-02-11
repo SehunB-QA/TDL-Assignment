@@ -18,5 +18,5 @@ public interface ToDoListRepo extends JpaRepository<ToDoList,Long> {
 	List<ToDoList> findByColourCode(String Colour);
 	
 	@Query(value ="SELECT * FROM TODOLIST WHERE NAME=?1", nativeQuery = true)
-	List<ToDoList> findByName(String Colour);
+	List<ToDoList> findByName(String Name);
 }
