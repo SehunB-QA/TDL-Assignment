@@ -15,11 +15,6 @@ public class TasksDTO {
     private String colour;
 
 
-public TasksDTO(String name, String description, String colour)
-{
-	this.name = name;
-	this.description = description;
-	this.colour = colour;
-}
+
 
 }
