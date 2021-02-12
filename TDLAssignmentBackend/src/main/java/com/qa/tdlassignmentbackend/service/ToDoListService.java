@@ -37,7 +37,7 @@ public class ToDoListService {
     /// CRUD \\\\
 
       //CREATE
-public ToDoListDTO CreateTask(ToDoList todoList)
+public ToDoListDTO CreateList(ToDoList todoList)
 {
 	return this.MapToDTO(this.todoListRepo.save(todoList));
 }
@@ -45,7 +45,7 @@ public ToDoListDTO CreateTask(ToDoList todoList)
 
     //READ : Read All  
 
- public List<ToDoListDTO> ReadAllTasks()
+ public List<ToDoListDTO> ReadAllLists()
  {
 	   return this.todoListRepo.findAll().
 			   stream().map(this::MapToDTO)
@@ -56,20 +56,13 @@ public ToDoListDTO CreateTask(ToDoList todoList)
 
  //READ : Read byID
 
-public ToDoListDTO ReadByID(Long id)
+public ToDoListDTO ReadListByID(Long id)
 {
 	return this.MapToDTO(this.todoListRepo.findById(id).orElseThrow());
 }
 
-//Custom Reads 
 
-public List<ToDoListDTO> FindByColourCode(String colour)
-{
-	return this.todoListRepo.findByColourCode(colour).
-			   stream().map(this::MapToDTO)
-			   .collect(Collectors.toList());
-	   //Streams : collect the tasks objects into a list data type and return them
-}
+//Custom Read
 
 public List<ToDoListDTO> FindByName(String name)
 {
@@ -81,9 +74,8 @@ public List<ToDoListDTO> FindByName(String name)
 
 
 
-
 //UPDATE
-public ToDoListDTO UpdateTask(ToDoListDTO toDoListDTO, Long id)
+public ToDoListDTO UpdateList(ToDoListDTO toDoListDTO, Long id)
 {
 	ToDoList dataToUpdate = this.todoListRepo.findById(id).orElseThrow();
 	

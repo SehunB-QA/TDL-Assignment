@@ -60,6 +60,25 @@ public class TaskService {
 	}
 	
 	
+	//Custom Reads 
+
+	public List<TasksDTO> FindByColourCode(String colour)
+	{
+		return this.tasksRepo.findByColourCode(colour).
+				   stream().map(this::MapToDTO)
+				   .collect(Collectors.toList());
+		   //Streams : collect the tasks objects into a list data type and return them
+	}
+
+	public List<TasksDTO> FindByName(String name)
+	{
+		return this.tasksRepo.findByName(name).
+				   stream().map(this::MapToDTO)
+				   .collect(Collectors.toList());
+		   //Streams : collect the tasks objects into a list data type and return them
+	}
+	
+	
 	//UPDATE
 	public TasksDTO UpdateTask(TasksDTO tasksDTO, Long id)
 	{

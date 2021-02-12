@@ -5,12 +5,12 @@ import java.util.List;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//Lombok to automatically generate :) our constructors, ToString, getters & setters etc... 
 @Data
 @NoArgsConstructor 
 public class ToDoListDTO {
 	
-	private Long listID;
+	//Lombok to automatically generate :) our constructors, ToString, getters & setters etc... 
+	private Long id;
 	private String name;
 	
 	private List<TasksDTO> tasks = new ArrayList<>();

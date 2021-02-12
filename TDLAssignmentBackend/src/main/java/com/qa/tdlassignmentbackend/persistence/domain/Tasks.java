@@ -12,13 +12,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor 
+@NoArgsConstructor
 @Entity
 public class Tasks {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long taskID;
+	private Long id;
 	@NotNull
 	private String name;
 	@NotNull
@@ -43,7 +43,7 @@ public class Tasks {
 	public Tasks(Long taskID, String name, String description, String colour)
 	{
 		super();
-		this.taskID = taskID;
+		this.id = taskID;
 		this.name = name;
 		this.description = description;
 		this.colour = colour;
