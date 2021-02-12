@@ -9,16 +9,21 @@ import java.util.Set;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 
-public class SpringBeanUtil {
+public final class SpringBeanUtil {
 
 	
-	public static void MergeNotNull(Object source, Object target)
+	private SpringBeanUtil()
 	{
-		copyProperties(source,target, GetNullPropName(source));
+		
+	}
+	
+	public static void mergeNotNull(Object source, Object target)
+	{
+		copyProperties(source,target, getNullPropName(source));
 	}
 	
 	
-	private static String[] GetNullPropName(Object src)
+	private static String[] getNullPropName(Object src)
 	{
 		final BeanWrapper wrappedSrObj = new BeanWrapperImpl(src);
 		

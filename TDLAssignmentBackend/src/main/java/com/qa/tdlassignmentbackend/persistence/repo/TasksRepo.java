@@ -19,9 +19,9 @@ public interface TasksRepo extends JpaRepository<Tasks,Long> {
 	//Custom Queries 
 	
 	@Query(value ="SELECT * FROM tasks WHERE COLOUR=?1", nativeQuery = true)
-	List<Tasks> findByColourCode(String Colour);
+	List<Tasks> findByColourCode(String colour);
 	
 	@Query(value ="SELECT * FROM tasks WHERE NAME=?1", nativeQuery = true)
-	List<Tasks> findByName(String Name);
+	List<Tasks> findByName(String name);
 	
 }

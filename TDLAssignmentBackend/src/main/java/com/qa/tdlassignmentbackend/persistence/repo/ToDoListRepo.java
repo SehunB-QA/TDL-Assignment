@@ -15,6 +15,6 @@ public interface ToDoListRepo extends JpaRepository<ToDoList,Long> {
 
 	
 	@Query(value ="SELECT * FROM to_do_list WHERE NAME=?1", nativeQuery = true)
-	List<ToDoList> findByName(String Name);
+	List<ToDoList> findByName(String name);
 	
 }

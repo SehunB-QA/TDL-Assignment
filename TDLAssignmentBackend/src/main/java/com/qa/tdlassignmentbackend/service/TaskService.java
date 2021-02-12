@@ -19,7 +19,7 @@ public class TaskService {
 	
 	private ModelMapper mapper; 
 	
-	private TasksDTO MapToDTO(Tasks tasks)
+	private TasksDTO mapToDTO(Tasks tasks)
 	{
 		return this.mapper.map(tasks,TasksDTO.class);
 	}
@@ -35,18 +35,18 @@ public class TaskService {
           /// CRUD \\\\
     
 	        //CREATE
-	public TasksDTO CreateTask(Tasks tasks)
+	public TasksDTO createTask(Tasks tasks)
 	{
-		return this.MapToDTO(this.tasksRepo.save(tasks));
+		return this.mapToDTO(this.tasksRepo.save(tasks));
 	}
 
 	
 	      //READ : Read All  
 	
-	   public List<TasksDTO> ReadAllTasks()
+	   public List<TasksDTO> readAllTasks()
 	   {
 		   return this.tasksRepo.findAll().
-				   stream().map(this::MapToDTO)
+				   stream().map(this::mapToDTO)
 				   .collect(Collectors.toList());
 		   //Streams : collect the tasks objects into a list data type and return them
 	   }
@@ -54,47 +54,47 @@ public class TaskService {
 	
 	   //READ : Read byID
 	
-	public TasksDTO ReadByID(Long id)
+	public TasksDTO readByID(Long id)
 	{
-		return this.MapToDTO(this.tasksRepo.findById(id).orElseThrow());
+		return this.mapToDTO(this.tasksRepo.findById(id).orElseThrow());
 	}
 	
 	
 	//Custom Reads 
 
-	public List<TasksDTO> FindByColourCode(String colour)
+	public List<TasksDTO> findByColourCode(String colour)
 	{
 		return this.tasksRepo.findByColourCode(colour).
-				   stream().map(this::MapToDTO)
+				   stream().map(this::mapToDTO)
 				   .collect(Collectors.toList());
 		   //Streams : collect the tasks objects into a list data type and return them
 	}
 
-	public List<TasksDTO> FindByName(String name)
+	public List<TasksDTO> findByName(String name)
 	{
 		return this.tasksRepo.findByName(name).
-				   stream().map(this::MapToDTO)
+				   stream().map(this::mapToDTO)
 				   .collect(Collectors.toList());
 		   //Streams : collect the tasks objects into a list data type and return them
 	}
 	
 	
 	//UPDATE
-	public TasksDTO UpdateTask(TasksDTO tasksDTO, Long id)
+	public TasksDTO updateTask(TasksDTO tasksDTO, Long id)
 	{
 		Tasks dataToUpdate = this.tasksRepo.findById(id).orElseThrow();
 		
 		dataToUpdate.setName(tasksDTO.getName());
 		
-		SpringBeanUtil.MergeNotNull(tasksDTO, dataToUpdate);
+		SpringBeanUtil.mergeNotNull(tasksDTO, dataToUpdate);
 		
-		return this.MapToDTO(this.tasksRepo.save(dataToUpdate));
+		return this.mapToDTO(this.tasksRepo.save(dataToUpdate));
 		
 	}
 	
 	//DELETE
 	
-	public boolean DeleteTask(Long id)
+	public boolean deleteTask(Long id)
 	{
 		this.tasksRepo.deleteById(id);
 		// Return true If the id does not exist anymore

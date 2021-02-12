@@ -33,17 +33,17 @@ public class ToDoListController {
 	}
 
 	@PostMapping("/create")
-	public ResponseEntity<ToDoListDTO> Create(@RequestBody ToDoList toDoList)
+	public ResponseEntity<ToDoListDTO> create(@RequestBody ToDoList toDoList)
 	{
-		ToDoListDTO createdList = this.toDoListService.CreateList(toDoList);
+		ToDoListDTO createdList = this.toDoListService.createList(toDoList);
 		return new ResponseEntity<>(createdList, HttpStatus.CREATED); 
 		
 	}
 	
 	@GetMapping("/read")
-	public ResponseEntity<List<ToDoListDTO>> ReadAll()
+	public ResponseEntity<List<ToDoListDTO>> readAll()
 	{
-		return  ResponseEntity.ok(this.toDoListService.ReadAllLists());
+		return  ResponseEntity.ok(this.toDoListService.readAllLists());
 		
 	}
 	
@@ -51,9 +51,9 @@ public class ToDoListController {
 	
 	
 	@GetMapping("/findbyname/{name}")
-	public ResponseEntity<List<ToDoListDTO>> FindByName(@PathVariable String name)
+	public ResponseEntity<List<ToDoListDTO>> findByName(@PathVariable String name)
 	{
-		return ResponseEntity.ok(this.toDoListService.FindByName(name));
+		return ResponseEntity.ok(this.toDoListService.findByName(name));
 		
 	}
 	
@@ -61,27 +61,27 @@ public class ToDoListController {
 	///
 	
 	@GetMapping("/read/{id}")
-	public ResponseEntity<ToDoListDTO> ReadSingleList(@PathVariable Long id)
+	public ResponseEntity<ToDoListDTO> readSingleList(@PathVariable Long id)
 	{
-		return ResponseEntity.ok(this.toDoListService.ReadListByID(id));
+		return ResponseEntity.ok(this.toDoListService.readListByID(id));
 		
 	}
 	
 	
 	@PutMapping("/update/{id}")
-	public ResponseEntity<ToDoListDTO> Update(@PathVariable Long id, @RequestBody ToDoListDTO toDoListDTO)
+	public ResponseEntity<ToDoListDTO> update(@PathVariable Long id, @RequestBody ToDoListDTO toDoListDTO)
 	{
 		
-		return new ResponseEntity<>(this.toDoListService.UpdateList(toDoListDTO, id), HttpStatus.ACCEPTED);
+		return new ResponseEntity<>(this.toDoListService.updateList(toDoListDTO, id), HttpStatus.ACCEPTED);
 		
 	}
 	
 	
 	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<ToDoListDTO> Delete(@PathVariable Long id)
+	public ResponseEntity<ToDoListDTO> delete(@PathVariable Long id)
 	{
 		
-		return this.toDoListService.DeleteEntireToDoList(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
+		return this.toDoListService.deleteEntireToDoList(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
 				: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		
 		   //itenrary if

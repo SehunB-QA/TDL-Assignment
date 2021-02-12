@@ -20,7 +20,7 @@ public class ToDoListService {
 	
 	private ModelMapper mapper; 
 	
-	private ToDoListDTO MapToDTO(ToDoList todolist)
+	private ToDoListDTO mapToDTO(ToDoList todolist)
 	{
 		return this.mapper.map(todolist,ToDoListDTO.class);
 	}
@@ -37,18 +37,18 @@ public class ToDoListService {
     /// CRUD \\\\
 
       //CREATE
-public ToDoListDTO CreateList(ToDoList todoList)
+public ToDoListDTO createList(ToDoList todoList)
 {
-	return this.MapToDTO(this.todoListRepo.save(todoList));
+	return this.mapToDTO(this.todoListRepo.save(todoList));
 }
 
 
     //READ : Read All  
 
- public List<ToDoListDTO> ReadAllLists()
+ public List<ToDoListDTO> readAllLists()
  {
 	   return this.todoListRepo.findAll().
-			   stream().map(this::MapToDTO)
+			   stream().map(this::mapToDTO)
 			   .collect(Collectors.toList());
 	   //Streams : collect the tasks objects into a list data type and return them
  }
@@ -56,18 +56,18 @@ public ToDoListDTO CreateList(ToDoList todoList)
 
  //READ : Read byID
 
-public ToDoListDTO ReadListByID(Long id)
+public ToDoListDTO readListByID(Long id)
 {
-	return this.MapToDTO(this.todoListRepo.findById(id).orElseThrow());
+	return this.mapToDTO(this.todoListRepo.findById(id).orElseThrow());
 }
 
 
 //Custom Read
 
-public List<ToDoListDTO> FindByName(String name)
+public List<ToDoListDTO> findByName(String name)
 {
 	return this.todoListRepo.findByName(name).
-			   stream().map(this::MapToDTO)
+			   stream().map(this::mapToDTO)
 			   .collect(Collectors.toList());
 	   //Streams : collect the tasks objects into a list data type and return them
 }
@@ -75,21 +75,21 @@ public List<ToDoListDTO> FindByName(String name)
 
 
 //UPDATE
-public ToDoListDTO UpdateList(ToDoListDTO toDoListDTO, Long id)
+public ToDoListDTO updateList(ToDoListDTO toDoListDTO, Long id)
 {
 	ToDoList dataToUpdate = this.todoListRepo.findById(id).orElseThrow();
 	
 	dataToUpdate.setName(toDoListDTO.getName());
 	
-	SpringBeanUtil.MergeNotNull(toDoListDTO, dataToUpdate);
+	SpringBeanUtil.mergeNotNull(toDoListDTO, dataToUpdate);
 	
-	return this.MapToDTO(this.todoListRepo.save(dataToUpdate));
+	return this.mapToDTO(this.todoListRepo.save(dataToUpdate));
 	
 }
 
 //DELETE
 
-public boolean DeleteEntireToDoList(Long id)
+public boolean deleteEntireToDoList(Long id)
 {
 	this.todoListRepo.deleteById(id);
 	// Return true If the id does not exist anymore

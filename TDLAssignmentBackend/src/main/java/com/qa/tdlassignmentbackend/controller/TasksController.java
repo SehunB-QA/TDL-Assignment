@@ -33,33 +33,33 @@ public class TasksController {
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<TasksDTO> Create(@RequestBody Tasks tasks)
+	public ResponseEntity<TasksDTO> create(@RequestBody Tasks tasks)
 	{
-		TasksDTO createdTask = this.taskService.CreateTask(tasks);
+		TasksDTO createdTask = this.taskService.createTask(tasks);
 		return new ResponseEntity<>(createdTask, HttpStatus.CREATED); 
 		
 	}
 	
 	@GetMapping("/read")
-	public ResponseEntity<List<TasksDTO>> ReadAll()
+	public ResponseEntity<List<TasksDTO>> readAll()
 	{
-		return  ResponseEntity.ok(this.taskService.ReadAllTasks());
+		return ResponseEntity.ok(this.taskService.readAllTasks());
 		
 	}
 	
 	 // Custom Reads
 	
 	@GetMapping("/findbycolourcode/{colour}")
-	public ResponseEntity<List<TasksDTO>> FindByColourCode(@PathVariable String colour)
+	public ResponseEntity<List<TasksDTO>> findByColourCode(@PathVariable String colour)
 	{
-		return  ResponseEntity.ok(this.taskService.FindByColourCode(colour));
+		return  ResponseEntity.ok(this.taskService.findByColourCode(colour));
 		
 	}
 
 	@GetMapping("/findbyname/{name}")
-	public ResponseEntity<List<TasksDTO>> FindByName(@PathVariable String name)
+	public ResponseEntity<List<TasksDTO>> findByName(@PathVariable String name)
 	{
-		return  ResponseEntity.ok(this.taskService.FindByName(name));
+		return  ResponseEntity.ok(this.taskService.findByName(name));
 		
 	}
 	
@@ -70,27 +70,27 @@ public class TasksController {
 	///
 	
 	@GetMapping("/read/{id}")
-	public ResponseEntity<TasksDTO> ReadSingleTask(@PathVariable Long id)
+	public ResponseEntity<TasksDTO> readSingleTask(@PathVariable Long id)
 	{
-		return ResponseEntity.ok(this.taskService.ReadByID(id));
+		return ResponseEntity.ok(this.taskService.readByID(id));
 		
 	}
 	
 	
 	@PutMapping("/update/{id}")
-	public ResponseEntity<TasksDTO> Update(@PathVariable Long id, @RequestBody TasksDTO tasksDTO)
+	public ResponseEntity<TasksDTO> update(@PathVariable Long id, @RequestBody TasksDTO tasksDTO)
 	{
 		
-		return new ResponseEntity<>(this.taskService.UpdateTask(tasksDTO, id), HttpStatus.ACCEPTED);
+		return new ResponseEntity<>(this.taskService.updateTask(tasksDTO, id), HttpStatus.ACCEPTED);
 		
 	}
 	
 	
 	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<TasksDTO> Delete(@PathVariable Long id)
+	public ResponseEntity<TasksDTO> delete(@PathVariable Long id)
 	{
 		
-		return this.taskService.DeleteTask(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
+		return this.taskService.deleteTask(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
 				: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		
 		   //itenrary if
