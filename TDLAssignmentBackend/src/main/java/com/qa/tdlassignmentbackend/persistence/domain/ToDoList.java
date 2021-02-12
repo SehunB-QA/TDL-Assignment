@@ -28,7 +28,7 @@ public class ToDoList {
 	private String name;
 	
 
-	@OneToMany(mappedBy = "toDoList", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "todolist", fetch = FetchType.EAGER)
 	@OnDelete(action = OnDeleteAction.CASCADE)
     private List<Tasks> tasks;
 

@@ -68,7 +68,7 @@ public class ToDoListController {
 	}
 	
 	
-	@PutMapping("/update/{id]")
+	@PutMapping("/update/{id}")
 	public ResponseEntity<ToDoListDTO> Update(@PathVariable Long id, @RequestBody ToDoListDTO toDoListDTO)
 	{
 		
@@ -77,7 +77,7 @@ public class ToDoListController {
 	}
 	
 	
-	@DeleteMapping("/delete/{id]")
+	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<ToDoListDTO> Delete(@PathVariable Long id)
 	{
 		

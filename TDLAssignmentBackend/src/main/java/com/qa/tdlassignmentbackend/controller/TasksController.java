@@ -20,7 +20,7 @@ import com.qa.tdlassignmentbackend.persistence.domain.Tasks;
 import com.qa.tdlassignmentbackend.service.TaskService;
 
 @RestController
-@CrossOrigin //Allows a  external party to connect to the controller
+@CrossOrigin
 @RequestMapping("/tasks")
 public class TasksController {
 	
@@ -49,7 +49,7 @@ public class TasksController {
 	
 	 // Custom Reads
 	
-	@GetMapping("/findbycolourcode/{colour")
+	@GetMapping("/findbycolourcode/{colour}")
 	public ResponseEntity<List<TasksDTO>> FindByColourCode(@PathVariable String colour)
 	{
 		return  ResponseEntity.ok(this.taskService.FindByColourCode(colour));
@@ -77,7 +77,7 @@ public class TasksController {
 	}
 	
 	
-	@PutMapping("/update/{id]")
+	@PutMapping("/update/{id}")
 	public ResponseEntity<TasksDTO> Update(@PathVariable Long id, @RequestBody TasksDTO tasksDTO)
 	{
 		
@@ -86,7 +86,7 @@ public class TasksController {
 	}
 	
 	
-	@DeleteMapping("/delete/{id]")
+	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<TasksDTO> Delete(@PathVariable Long id)
 	{
 		

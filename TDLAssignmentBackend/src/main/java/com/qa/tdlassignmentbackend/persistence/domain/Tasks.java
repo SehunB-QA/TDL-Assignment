@@ -27,7 +27,7 @@ public class Tasks {
     private String colour;
 	
 	@ManyToOne
-	private ToDoList toDoList = null;
+	private ToDoList todolist = null;
 	
 	
 	
