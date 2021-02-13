@@ -43,6 +43,15 @@ public class ToDoList {
 		this.id = listID;
 		this.name = name;
 	}
+
+	public ToDoList(List<Tasks> tasks, Long id) {
+		super();
+		this.tasks = tasks;
+		this.id = id;
+	}
+	
+	
+	
 	
 	
 }

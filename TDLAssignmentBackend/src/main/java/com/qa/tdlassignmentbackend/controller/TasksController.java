@@ -97,5 +97,18 @@ public class TasksController {
 		
 	}
 	
+	// Custom if the user wants to delete a task from a list but not the whole task itself
+	//Updates the task reference to a joined list by setting the relationship task to list to null
+	@PutMapping("/removefromlist/{taskID}")
+	public ResponseEntity<TasksDTO> removeTaskFromToDoList(@PathVariable Long taskID)
+	{
+		
+		return this.taskService.removeTaskFromToDoList(taskID) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
+				: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		
+		   //itenrary if
+		
+	}
+	
 	
 }

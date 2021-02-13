@@ -98,7 +98,7 @@ public boolean deleteEntireToDoList(Long id)
 }
 
 
-	// delete task from ToDoList
+
 	
 	
 	

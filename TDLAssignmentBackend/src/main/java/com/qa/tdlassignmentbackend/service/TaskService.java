@@ -102,6 +102,16 @@ public class TaskService {
 	}
 	
 	
+	// Custom Update : Remove task from list, does not delete whole task
+	
+		public boolean removeTaskFromToDoList(Long taskID)
+		{
+			this.tasksRepo.removeTaskFromToDoList(taskID);
+			// Return true if the id does exist 
+			return this.tasksRepo.existsById(taskID);
+		}
+		
+	
 	
 }
 
