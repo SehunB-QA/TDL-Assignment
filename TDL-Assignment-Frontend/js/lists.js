@@ -39,8 +39,10 @@ function createList()
 
     let request = new Request(url, {
         method: "POST",
-        body: dataToSend,
-        headers: new Headers()
+        body: JSON.stringify(dataToSend),
+        headers: {
+            "Content-type": "application/json",
+        },
     });
 
     fetch(request)
@@ -49,5 +51,9 @@ function createList()
     })
 
 }
+
+document.querySelector("button#createListButton").addEventListener("click", createList);
+
+
 
 
