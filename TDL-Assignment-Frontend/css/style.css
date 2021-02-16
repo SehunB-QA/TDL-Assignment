@@ -1,0 +1,112 @@
+body{
+    
+    background-color: #EDC7B7; 
+    
+}
+
+.landing-page{
+    text-align: center;
+    
+    
+}
+
+#createtask-page{
+    text-align: center;
+    position: relative;
+    left: 200px;
+    
+}
+
+input{
+    text-align: center;
+}
+/* Center Placeholder text for Chrome, Opera, Safari */
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  /* Center Placeholder text for Firefox 18- */
+  :-moz-placeholder {
+    text-align: center;
+  }
+
+.sidebar {
+
+height: 100%;
+width: 200px;
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+.sidebar a, .dropdown-btn{
+
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown-btn:hover{
+    color: whitesmoke;
+}
+
+.sidebar a:hover{
+    color: white;
+}
+
+.main{
+    margin-left: 200px;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.active {
+    background-color: #ff3e00;
+    color: white;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+
+.fa-caret-down{
+    float: right;
+    padding-right: 8px;
+}
+
+#landingIntroTextOne{
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+    left: 32px;
+}
+
+#landingIntroTextTwo{
+    text-align: center;
+    position: relative;
+    bottom: 155px;
+    left: 32px;
+}
+
+
+#supernotesLogo{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    left: 30px;
+}
+

@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "1b07291b-a284-4a79-b18a-3d6b4c071777",
+		"name": "ToDoList REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create ToDoList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"list to be deleted :(\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9094/todolist/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"todolist",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read All ToDoList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9094/todolist/read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"todolist",
+						"read"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read by ID ToDoList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9094/todolist/read/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"todolist",
+						"read",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindByName ToDoList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9094/todolist/findbyname/shoppinglist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"todolist",
+						"findbyname",
+						"shoppinglist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update List",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Update list test REST\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9094/todolist/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"todolist",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Whole ToDoList",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9094/todolist/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"todolist",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
