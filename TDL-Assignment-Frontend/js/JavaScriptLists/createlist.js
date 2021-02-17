@@ -51,22 +51,45 @@ function createList()
     });
 
     fetch(request)
-        .then(function () {
+        .then(function (response) {
+                 //Response from API
+                 if (response.status !== 201)
+                 {
+                       //Display error on page if there's a failure
+                       console.log(`Request failed ${error}`);
+                       let failedText = document.querySelector("#failedCreatedListText").innerHTML = `Failed to create list:  ${response.status}`;
+                 }
+                 else
+                 {
+                     console.log("List created!");
+                    let successText = document.querySelector("#createdListSuccessText").innerHTML = "List Created!";
+     
+                 }
         //Response from API
-        console.log("List created!");
+        
          //Display a sucess message on page if it's gone through :)
-        let successText = document.querySelector("#createdListSuccessText").innerHTML = "List Created!";
+      
     }) 
     //Display error on page if there's a failure
     .catch((error) => {
         console.log(`Request failed ${error}`);
-        let failedText = document.querySelector("#failedCreatedListText").innerHTML = `Failed to create list:  ${error}`;
+        let failedText = document.querySelector("#failedCreatedListText").innerHTML = `Failed to create list:  Error:  ${error}`; 
 
       });
 
 }
 
+
+
+
+
+
+
+
+
+
 document.querySelector("button#createListButton").addEventListener("click", createList);
+
 
 
 
