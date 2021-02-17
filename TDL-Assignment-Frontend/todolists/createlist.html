@@ -52,11 +52,14 @@
       </div>
 </div>
 
-<form>
+<form onSubmit="return false">
 <div class="form-group" id="createtask-page">
     <label for="listNameLabel">List Name</label>
     <input type="text" class="form-control" id="listnameInput" placeholder="Enter the name of the list you'll use to group your tasks">
     <button type="submit" class="btn btn-primary" id="createListButton" onClick="createList" >Create List</button>
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="createdListSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedCreatedListText"></p>
+
 
 </div> 
 </form>

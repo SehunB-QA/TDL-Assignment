@@ -48,7 +48,16 @@ function createList()
     fetch(request)
         .then(function () {
         //Response from API
-    })
+        console.log("List created!");
+         //Display a sucess message on page if it's gone through :)
+        let sucessText = document.querySelector("#createdListSuccessText").innerHTML = "List Created!";
+    }) 
+    //Display error on page if there's a failure
+    .catch((error) => {
+        console.log(`Request failed ${error}`);
+        let sucessText = document.querySelector("#failedCreatedListText").innerHTML = `Failed to create list:  ${error}`;
+
+      });
 
 }
 
