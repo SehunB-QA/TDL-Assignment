@@ -59,6 +59,8 @@ function displayList()
                //console.log(data);
               // const { 0: {id,name,description,colour}} = data.tasks;
        
+                // const { 0: {id,name,description,colour}} = data.tasks;
+                
                // console.log(`Task id: ${id}  Task Name: ${name} Task description: ${description} Task colour ${colour}`);
                //const a = data.tasks[0];
 
@@ -81,6 +83,7 @@ function displayList()
               document.querySelector("#displayTable").appendChild(table); 
               for(let key in data)
               {
+               
                   row = document.createElement("tr");
                   cellA = document.createElement("td");
                   cellB = document.createElement("td");
@@ -91,8 +94,16 @@ function displayList()
                   
                   table.appendChild(row);
                   row.appendChild(cellA);
-                  row.appendChild(cellB);
-/* 
+
+                  console.log(data[key]);
+                  if(!Array.isArray(data[key]))
+                  {
+                 
+                    row.appendChild(cellB);
+                  
+                  }
+                 
+/*              
                   for(let key in tasksData)
                   {
                     cellC = document.createElement("td");
