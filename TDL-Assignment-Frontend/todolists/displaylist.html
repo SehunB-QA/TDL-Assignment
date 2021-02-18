@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name = "author" content="Sehun Babatunde">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Create a New Task | Tasks | FireNotes</title> 
+    <title> Delete a ToDoList | ToDoList | FireNotes</title> 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,11 +32,11 @@
     <i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-container">
-        <a href="/todolists/createlist.html"> Create ToDoList </a>
+        <a href="./createlist.html"> Create ToDoList </a>
         <a href="#"> Update List Name </a>
-        <a href="/todolists/displaylist.html"> Display List </a>
+        <a href="./displaylist.html"> Display List </a>
         <a href="#"> Find List By Name </a>
-        <a href="/todolists/deletelist.html"> Delete List</a>
+        <a href="./deletelist.html"> Delete List</a>
     </div>
     <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-tasks"></i> Tasks
       <i class="fa fa-caret-down"></i> 
@@ -52,21 +52,19 @@
       </div>
 </div>
 
-<form>
+<form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="taskNameLabel">Task Name</label>
-    <input type="text" class="form-control" id="tasknameInput" placeholder="Enter the name of the task you'll conquer">
-    <label for="taskcolourLabel">Task Colour</label>
-    <input type="text" class="form-control" id="taskcolourInput" placeholder="Enter a nice colour to group your tasks together">
-    <label for="taskDescriptionLabel">Task Description <textarea class="form-control" id="taskDescriptionTextStringBox" name="taskDescriptionTextStringBox" placeholder="Enter a cool description..." ></textarea></label><br> 
-    <label for="taskGroupIDLabel">ToDoList ID</label>
-    <input type="number" class="form-control" id="taskGroupIDInput" placeholder="Enter the ID of the list to add your task to">
-    <button type="submit" class="btn btn-primary" disabled>Create Task</button>
-
+    <label for="listIDLabel">List ID  <input type="number" class="form-control" id="listIDInput" placeholder="Enter the id of the list you'll like to display"> </label>
+    <button type="submit" class="btn btn-primary" id="displayListButton" onClick="displayList" >Display List</button>
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="displayListSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedDisplayListText"></p>
+    <div id="displayTable"></div>
+    <div id="displayTaskTable"></div>
+</form>
 </div> 
 
-</form>
 
 <script src="/js/script.js"></script>
+<script src="/js/JavaScriptLists/displaylist.js"></script>
 </body>
 </html>

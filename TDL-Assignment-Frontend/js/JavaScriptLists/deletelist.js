@@ -33,9 +33,7 @@ function checkDeleteListTextInput()
 function deleteList()
 {
     let listID = document.querySelector("#listIDInput").value;
-   /*  let finalListIDtring = listID;
-    //Remove all whitespaces/ spacing from input string
-    finalListIDString = finalListIDString.replace(/\s+/g, '') */;
+ 
     const url = "http://localhost:9094/todolist/delete/" + listID; 
 
     let request = new Request(url, {
