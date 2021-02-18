@@ -1,18 +1,18 @@
 'use strict'
 
-let listIDInput = document.querySelector ("#listIDInput");
+let listNameInput = document.querySelector ("#listNameInput");
 let displayListButton = document.querySelector("#displayListButton");
 displayListButton.disabled = true;
-listIDInput.addEventListener("change",checkDisplayListIDInput);
+listNameInput.addEventListener("change",checkDisplayListNameInput);
 
 let listTable = document.querySelector("listTable");
 
-function checkDisplayListIDInput()
+function checkDisplayListNameInput()
 {
 
 
     // Check input is not empty, if empty disable button
-    if(document.querySelector("#listIDInput").value === "")
+    if(document.querySelector("#listNameInput").value === "")
     {
         displayListButton.disabled = true;
     } 
@@ -25,13 +25,12 @@ function checkDisplayListIDInput()
 
 
 
-
 //Read
 function displayList()
 {
-    let listID = document.querySelector("#listIDInput").value;
+    let listName = document.querySelector("#listNameInput").value;
  
-    const url = "http://localhost:9094/todolist/read/" + listID; 
+    const url = "http://localhost:9094/todolist/findbyname/" + listName; 
 
     let request = new Request(url, {
         method: "GET",  
@@ -197,6 +196,14 @@ function displayList()
 
 
 }
+
+
+
+
+
+
+
+
 
 
 function clearDisplayedLists()

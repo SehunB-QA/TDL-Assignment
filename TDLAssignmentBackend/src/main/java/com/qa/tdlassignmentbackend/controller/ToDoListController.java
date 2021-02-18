@@ -51,7 +51,7 @@ public class ToDoListController {
 	
 	
 	@GetMapping("/findbyname/{name}")
-	public ResponseEntity<List<ToDoListDTO>> findByName(@PathVariable String name)
+	public ResponseEntity<ToDoListDTO> findByName(@PathVariable String name)
 	{
 		return ResponseEntity.ok(this.toDoListService.findByName(name));
 		

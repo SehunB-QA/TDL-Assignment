@@ -64,11 +64,9 @@ public ToDoListDTO readListByID(Long id)
 
 //Custom Read
 
-public List<ToDoListDTO> findByName(String name)
+public ToDoListDTO findByName(String name)
 {
-	return this.todoListRepo.findByName(name).
-			   stream().map(this::mapToDTO)
-			   .collect(Collectors.toList());
+	return this.mapToDTO(this.todoListRepo.findByName(name).orElseThrow());
 	   //Streams : collect the tasks objects into a list data type and return them
 }
 

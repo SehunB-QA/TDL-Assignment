@@ -33,9 +33,9 @@
     </button>
     <div class="dropdown-container">
         <a href="./createlist.html"> Create ToDoList </a>
-        <a href="#"> Update List Name </a>
+        <a href="./updatelistname.html"> Update List Name </a>
         <a href="./displaylist.html"> Display List </a>
-        <a href="#"> Find List By Name </a>
+        <a href="./findlistbyname.html"> Find List By Name </a>
         <a href="./deletelist.html"> Delete List</a>
     </div>
     <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-tasks"></i> Tasks
@@ -54,8 +54,7 @@
 
 <form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="listIDLabel">List ID</label>
-    <input type="number" class="form-control" id="listIDInput" placeholder="Enter the id of the list you'll like delete">
+    <label for="listIDLabel">List ID <input type="number" class="form-control" id="listIDInput" placeholder="Enter the id of the list you'll like delete"></label>
     <button type="submit" class="btn btn-danger" id="deleteListButton" onClick="deleteList" >Delete List</button>
     <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="deletedListSuccessText"></p>
     <p style="color: rgb(255, 0, 0)" id="deletedCreatedListText"></p>

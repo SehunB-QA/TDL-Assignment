@@ -50,14 +50,14 @@ public class TasksController {
 	 // Custom Reads
 	
 	@GetMapping("/findbycolourcode/{colour}")
-	public ResponseEntity<List<TasksDTO>> findByColourCode(@PathVariable String colour)
+	public ResponseEntity <TasksDTO> findByColourCode(@PathVariable String colour)
 	{
 		return  ResponseEntity.ok(this.taskService.findByColourCode(colour));
 		
 	}
 
 	@GetMapping("/findbyname/{name}")
-	public ResponseEntity<List<TasksDTO>> findByName(@PathVariable String name)
+	public ResponseEntity <TasksDTO> findByName(@PathVariable String name)
 	{
 		return  ResponseEntity.ok(this.taskService.findByName(name));
 		
