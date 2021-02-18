@@ -95,7 +95,8 @@ function displayList()
                   table.appendChild(row);
                   row.appendChild(cellA);
 
-                  console.log(data[key]);
+                  //console.log(data[key]);
+                  //Hide nested arrays
                   if(!Array.isArray(data[key]))
                   {
                  
@@ -114,6 +115,9 @@ function displayList()
 
               }
 
+
+                    //// Tasks Loop \\\\\
+
               let taskTable = document.createElement("table");
               let taskRow;
               let cellC; 
@@ -123,7 +127,7 @@ function displayList()
                   let element = data.tasks[index];
                   //let a = data.tasks[0];
                  
-
+               
                //console.log(a);
 
               for(let key in element)
@@ -145,6 +149,7 @@ function displayList()
               }
               
             }
+            ////  \\\\
 
 
 
@@ -193,7 +198,27 @@ function displayList()
 }
 
 
+function clearDisplayedLists()
+{
+    let toDoListTable = document.querySelector("#displayTable");
+    let taskTable = document.querySelector("#displayTaskTable");
+   
+   if(toDoListTable.firstChild)
+   {
+    toDoListTable.removeChild(toDoListTable.firstChild);
+   }
+   
+   if(taskTable.firstChild)
+    {
+
+        taskTable.removeChild(taskTable.firstChild);
+    }
+  
+}
+
+
 
 
 document.querySelector("button#displayListButton").addEventListener("click", displayList);
+document.querySelector("button#clearDisplayedListsButton").addEventListener("click", clearDisplayedLists);
 
