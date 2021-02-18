@@ -60,9 +60,9 @@ function displayList()
               // const { 0: {id,name,description,colour}} = data.tasks;
        
                // console.log(`Task id: ${id}  Task Name: ${name} Task description: ${description} Task colour ${colour}`);
-               const a = data.tasks[0];
+               //const a = data.tasks[0];
 
-               console.log(a);
+              // console.log(a);
                
                //console.log( tasksData);
                // tasksData = JSON.stringify(tasksData);
@@ -107,7 +107,15 @@ function displayList()
               let taskRow;
               let cellC; 
               let cellD;
-              for(let key in a)
+
+              for (let index = 0; index < data.tasks.length; index++) {
+                  let element = data.tasks[index];
+                  //let a = data.tasks[0];
+                 
+
+               //console.log(a);
+
+              for(let key in element)
               {
                
                 document.querySelector("#displayTaskTable").appendChild(taskTable);
@@ -118,14 +126,14 @@ function displayList()
                 
 
                 cellC.innerHTML = key;
-                cellD.innerHTML = a[key];
+                cellD.innerHTML = element[key];
                 
                 taskTable.appendChild(taskRow);
                 taskRow.appendChild(cellC);
                 taskRow.appendChild(cellD);
               }
               
-
+            }
 
 
 
