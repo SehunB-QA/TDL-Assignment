@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- Author: Sehun Babatunde -->
-<html: lang="en">
+<html lang="en">
     <head>
     <meta charset="UTF-8">
     <meta name = "author" content="Sehun Babatunde">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Delete a ToDoList | ToDoList | FireNotes</title> 
+    <title>Update Task | Tasks | FireNotes</title> 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,11 +32,11 @@
     <i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-container">
-        <a href="./createlist.html"> Create ToDoList </a>
-        <a href="./updatelistname.html"> Update List Name </a>
-        <a href="./displaylist.html"> Display List </a>
-        <a href="./findlistbyname.html"> Find List By Name </a>
-        <a href="./deletelist.html"> Delete List</a>
+        <a href="/todolists/createlist.html"> Create ToDoList </a>
+        <a href="/todolists/updatelistname.html"> Update List Name </a>
+        <a href="/todolists/displaylist.html"> Display List </a>
+        <a href="/todolists/findlistbyname.html"> Find List By Name </a>
+        <a href="/todolists/deletelist.html"> Delete List</a>
     </div>
     <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-tasks"></i> Tasks
       <i class="fa fa-caret-down"></i> 
@@ -54,16 +54,28 @@
 
 <form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="listIDLabel">List ID <input type="number" class="form-control" id="listIDInput" placeholder="Enter the id of the list you'll like delete"></label>
-    <button type="submit" class="btn btn-danger" id="deleteListButton" onClick="deleteList" >Delete List</button>
-    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="deletedListSuccessText"></p>
-    <p style="color: rgb(255, 0, 0)" id="deletedCreatedListText"></p>
-
-
-</div> 
+    <label for="taskIDLabelFirst">Task ID  <input type="number" class="form-control" id="taskIDInput" placeholder="Enter the ID of the list you'll like to update"></label>
+    <button type="button" class="btn btn-primary"  id="getTaskIDButton" onclick="getTaskDetails">Get Task ID</button> 
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="gotIDSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedGetTaskIDText"></p>
+    
+</form>
+<form onSubmit = "return false">
+<div id="displayForm">
+    <label for="taskIDLabel">Retrieved Task ID <input type="number" class="form-control" id="retrievedTaskID" readonly></label>
+    <label for="taskNameLabel">New Task Name <input type="text" class="form-control" id="updatedTaskNameInput"></label>
+    <label for="taskColourLabel">New Task Colour <input type="text" class="form-control" id="updatedTaskColourInput"></label> <br>
+    <label for="taskDescriptionLabel">New Task Description <textarea class="form-control" id="updatedTaskDescriptionInput" name="updatedTaskDescriptionInput"></textarea></label> <br>
+    <button type="button" class="btn btn-primary" id="updateTaskButton" onClick="updateTask" >Update Task</button>
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="updatedIDSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedUpdateIDText"></p>
+</div>
 </form>
 
+</div> 
+
+
 <script src="/js/script.js"></script>
-<script src="/js/JavaScriptLists/deletelist.js"></script>
+<script src="/js/JavaScriptTasks/updateTask.js"></script>
 </body>
 </html>
