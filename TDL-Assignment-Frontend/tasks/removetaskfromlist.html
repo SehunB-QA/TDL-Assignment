@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- Author: Sehun Babatunde -->
-<html lang="en">
+<html: lang="en">
     <head>
     <meta charset="UTF-8">
     <meta name = "author" content="Sehun Babatunde">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Find List By Name  | ToDoList | FireNotes</title> 
+    <title>Remove Task From List | Tasks | FireNotes</title> 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,11 +32,11 @@
     <i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-container">
-        <a href="./createlist.html"> Create ToDoList </a>
-        <a href="./updatelistname.html"> Update List Name </a>
-        <a href="./displaylist.html"> Display List </a>
-        <a href="./findlistbyname.html"> Find List By Name </a>
-        <a href="./deletelist.html"> Delete List</a>
+        <a href="/todolists/createlist.html"> Create ToDoList </a>
+        <a href="/todolists/updatelistname.html"> Update List Name </a>
+        <a href="/todolists/displaylist.html"> Display List </a>
+        <a href="/todolists/findlistbyname.html"> Find List By Name </a>
+        <a href="/todolists/deletelist.html"> Delete List</a>
     </div>
     <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-tasks"></i> Tasks
       <i class="fa fa-caret-down"></i> 
@@ -45,8 +45,8 @@
           <a href="/tasks/createtask.html"> Create Task & Add to ToDoList</a>
           <a href="/tasks/updatetask.html"> Update Task </a>
           <a href="/tasks/displaytask.html"> Display Task </a>
-          <a href="/tasks/findtaskbycolour.html"> Find Task By Colour </a>
-          <a href="/tasks/findtaskbyname.html"> Find Task By Name</a>
+          <a href="/tasks/findTaskByColour.html"> Find Task By Colour </a>
+          <a href="/tasks/findTaskByName.html"> Find Task By Name</a>
           <a href="/tasks/deletetask.html"> Delete Task</a>
           <a href="/tasks/removetaskfromlist.html"> Remove Task from list</a>
       </div>
@@ -54,18 +54,16 @@
 
 <form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="listNameLabel">List Name  <input type="text" class="form-control" id="listNameInput" placeholder="Enter the name of the list you'll like to display"> </label>
-    <button type="submit" class="btn btn-primary" id="displayListButton" onClick="displayList" >Display List</button>
-    <button type="button" class="btn btn-secondary"  id="clearDisplayedListsButton" onclick="clearDisplayedLists">Clear List</button> 
-    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="displayListSuccessText"></p>
-    <p style="color: rgb(255, 0, 0)" id="failedDisplayListText"></p>
-    <div id="displayTable"></div>
-    <div id="displayTaskTable"></div>
-</form>
-</div> 
+    <label for="taskIDLabel">Task ID <input type="number" class="form-control" id="taskIDInput" placeholder="Enter the id of the task you'll like to remove from the connected list"></label>
+    <button type="submit" class="btn btn-danger" id="removeTaskFromListButton" onClick="removeTaskFromList" >Remove Task From List</button>
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="RemoveTaskSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedRemoveTaskText"></p>
 
+
+</div> 
+</form>
 
 <script src="/js/script.js"></script>
-<script src="/js/JavaScriptLists/findListByName.js"></script>
+<script src="/js/JavaScriptTasks/removeTaskFromList.js"></script>
 </body>
 </html>

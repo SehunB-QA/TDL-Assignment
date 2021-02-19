@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name = "author" content="Sehun Babatunde">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Find List By Name  | ToDoList | FireNotes</title> 
+    <title> Find Task By Colour  | Tasks | FireNotes</title> 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,11 +32,11 @@
     <i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-container">
-        <a href="./createlist.html"> Create ToDoList </a>
-        <a href="./updatelistname.html"> Update List Name </a>
-        <a href="./displaylist.html"> Display List </a>
-        <a href="./findlistbyname.html"> Find List By Name </a>
-        <a href="./deletelist.html"> Delete List</a>
+        <a href="/todolists/createlist.html"> Create ToDoList </a>
+        <a href="/todolists/updatelistname.html"> Update List Name </a>
+        <a href="/todolists/displaylist.html"> Display List </a>
+        <a href="/todolists/findlistbyname.html"> Find List By Name </a>
+        <a href="/todolists/deletelist.html"> Delete List</a>
     </div>
     <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-tasks"></i> Tasks
       <i class="fa fa-caret-down"></i> 
@@ -54,18 +54,17 @@
 
 <form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="listNameLabel">List Name  <input type="text" class="form-control" id="listNameInput" placeholder="Enter the name of the list you'll like to display"> </label>
-    <button type="submit" class="btn btn-primary" id="displayListButton" onClick="displayList" >Display List</button>
-    <button type="button" class="btn btn-secondary"  id="clearDisplayedListsButton" onclick="clearDisplayedLists">Clear List</button> 
-    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="displayListSuccessText"></p>
-    <p style="color: rgb(255, 0, 0)" id="failedDisplayListText"></p>
+    <label for="taskColourLabel">Task Colour  <input type="text" class="form-control" id="taskColourInput" placeholder="Enter the colour of the task you'll like to display"> </label>
+    <button type="submit" class="btn btn-primary" id="displayTaskButton" onClick="displayTaskByColour">Display Task</button>
+    <button type="button" class="btn btn-secondary"  id="clearDisplayedTaskButton" onclick="clearDisplayedTask">Clear List</button> 
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="displayTaskSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedDisplayTaskText"></p>
     <div id="displayTable"></div>
-    <div id="displayTaskTable"></div>
 </form>
 </div> 
 
 
 <script src="/js/script.js"></script>
-<script src="/js/JavaScriptLists/findListByName.js"></script>
+<script src="/js/JavaScriptTasks/findTaskByColour.js"></script>
 </body>
 </html>
