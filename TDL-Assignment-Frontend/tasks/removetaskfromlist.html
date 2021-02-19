@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- Author: Sehun Babatunde -->
-<html lang="en">
+<html: lang="en">
     <head>
     <meta charset="UTF-8">
     <meta name = "author" content="Sehun Babatunde">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Task | Tasks | FireNotes</title> 
+    <title>Remove Task From List | Tasks | FireNotes</title> 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,8 +45,8 @@
           <a href="/tasks/createtask.html"> Create Task & Add to ToDoList</a>
           <a href="/tasks/updatetask.html"> Update Task </a>
           <a href="/tasks/displaytask.html"> Display Task </a>
-          <a href="/tasks/findtaskbycolour.html"> Find Task By Colour </a>
-          <a href="/tasks/findtaskbyname.html"> Find Task By Name</a>
+          <a href="/tasks/findTaskByColour.html"> Find Task By Colour </a>
+          <a href="/tasks/findTaskByName.html"> Find Task By Name</a>
           <a href="/tasks/deletetask.html"> Delete Task</a>
           <a href="/tasks/removetaskfromlist.html"> Remove Task from list</a>
       </div>
@@ -54,28 +54,16 @@
 
 <form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="taskIDLabelFirst">Task ID  <input type="number" class="form-control" id="taskIDInput" placeholder="Enter the ID of the list you'll like to update"></label>
-    <button type="button" class="btn btn-primary"  id="getTaskIDButton" onclick="getTaskDetails">Get Task ID</button> 
-    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="gotIDSuccessText"></p>
-    <p style="color: rgb(255, 0, 0)" id="failedGetTaskIDText"></p>
-    
-</form>
-<form onSubmit = "return false">
-<div id="displayForm">
-    <label for="taskIDLabel">Retrieved Task ID <input type="number" class="form-control" id="retrievedTaskID" readonly></label>
-    <label for="taskNameLabel">New Task Name <input type="text" class="form-control" id="updatedTaskNameInput"></label>
-    <label for="taskColourLabel">New Task Colour <input type="text" class="form-control" id="updatedTaskColourInput"></label> <br>
-    <label for="taskDescriptionLabel">New Task Description <textarea class="form-control" id="updatedTaskDescriptionInput" name="updatedTaskDescriptionInput"></textarea></label> <br>
-    <button type="button" class="btn btn-primary" id="updateTaskButton" onClick="updateTask" >Update Task</button>
-    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="updatedIDSuccessText"></p>
-    <p style="color: rgb(255, 0, 0)" id="failedUpdateIDText"></p>
-</div>
-</form>
+    <label for="taskIDLabel">Task ID <input type="number" class="form-control" id="taskIDInput" placeholder="Enter the id of the task you'll like to remove from the connected list"></label>
+    <button type="submit" class="btn btn-danger" id="removeTaskFromListButton" onClick="removeTaskFromList" >Remove Task From List</button>
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="RemoveTaskSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedRemoveTaskText"></p>
+
 
 </div> 
-
+</form>
 
 <script src="/js/script.js"></script>
-<script src="/js/JavaScriptTasks/updateTask.js"></script>
+<script src="/js/JavaScriptTasks/removeTaskFromList.js"></script>
 </body>
 </html>
