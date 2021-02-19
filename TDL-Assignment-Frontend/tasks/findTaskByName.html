@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- Author: Sehun Babatunde -->
-<html: lang="en">
+<html lang="en">
     <head>
     <meta charset="UTF-8">
     <meta name = "author" content="Sehun Babatunde">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete a Task | Tasks | FireNotes</title> 
+    <title> Find Task By Name  | Tasks | FireNotes</title> 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -54,16 +54,17 @@
 
 <form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="taskIDLabel">List ID <input type="number" class="form-control" id="taskIDInput" placeholder="Enter the id of the task you'll like delete"></label>
-    <button type="submit" class="btn btn-danger" id="deleteTaskButton" onClick="deleteTask" >Delete Task</button>
-    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="deletedTaskSuccessText"></p>
-    <p style="color: rgb(255, 0, 0)" id="failedDeleteTaskText"></p>
-
-
-</div> 
+    <label for="taskNameLabel">Task Name  <input type="text" class="form-control" id="taskNameInput" placeholder="Enter the name of the task you'll like to display"> </label>
+    <button type="submit" class="btn btn-primary" id="displayTaskButton" onClick="displayTaskByName">Display Task</button>
+    <button type="button" class="btn btn-secondary"  id="clearDisplayedTaskButton" onclick="clearDisplayedTask">Clear Task</button> 
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="displayTaskSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedDisplayTaskText"></p>
+    <div id="displayTable"></div>
 </form>
+</div> 
+
 
 <script src="/js/script.js"></script>
-<script src="/js/JavaScriptTasks/deleteTask.js"></script>
+<script src="/js/JavaScriptTasks/findTaskByName.js"></script>
 </body>
 </html>

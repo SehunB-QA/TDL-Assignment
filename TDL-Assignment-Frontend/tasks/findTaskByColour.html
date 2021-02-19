@@ -32,11 +32,11 @@
     <i class="fa fa-caret-down"></i> 
     </button>
     <div class="dropdown-container">
-        <a href="./createlist.html"> Create ToDoList </a>
-        <a href="./updatelistname.html"> Update List Name </a>
-        <a href="./displaylist.html"> Display List </a>
-        <a href="./findlistbyname.html"> Find List By Name </a>
-        <a href="./deletelist.html"> Delete List</a>
+        <a href="/todolists/createlist.html"> Create ToDoList </a>
+        <a href="/todolists/updatelistname.html"> Update List Name </a>
+        <a href="/todolists/displaylist.html"> Display List </a>
+        <a href="/todolists/findlistbyname.html"> Find List By Name </a>
+        <a href="/todolists/deletelist.html"> Delete List</a>
     </div>
     <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-tasks"></i> Tasks
       <i class="fa fa-caret-down"></i> 
@@ -46,7 +46,7 @@
           <a href="/tasks/updatetask.html"> Update Task </a>
           <a href="/tasks/displaytask.html"> Display Task </a>
           <a href="/tasks/findTaskByColour.html"> Find Task By Colour </a>
-          <a href="#"> Find Task By Name</a>
+          <a href="/tasks/findTaskByName.html"> Find Task By Name</a>
           <a href="/tasks/deletetask.html"> Delete Task</a>
           <a href="#"> Remove Task from list</a>
       </div>
@@ -54,7 +54,7 @@
 
 <form onSubmit="return false">
 <div class="form-group" id="createtask-page">
-    <label for="listNameLabel">Task Colour  <input type="text" class="form-control" id="taskColourInput" placeholder="Enter the colour of the task you'll like to display"> </label>
+    <label for="taskColourLabel">Task Colour  <input type="text" class="form-control" id="taskColourInput" placeholder="Enter the colour of the task you'll like to display"> </label>
     <button type="submit" class="btn btn-primary" id="displayTaskButton" onClick="displayTaskByColour">Display Task</button>
     <button type="button" class="btn btn-secondary"  id="clearDisplayedTaskButton" onclick="clearDisplayedTask">Clear List</button> 
     <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="displayTaskSuccessText"></p>
