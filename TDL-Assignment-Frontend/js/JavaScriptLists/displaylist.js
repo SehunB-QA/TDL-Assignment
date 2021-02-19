@@ -51,28 +51,9 @@ function displayList()
             }
             else
             {
-              //  response.json().then((data) => console.info(data));
-               // console.log(response);
-
+             
                response.json().then((data) => {
-                let tasksData = data.tasks;
-               //console.log(data);
-              // const { 0: {id,name,description,colour}} = data.tasks;
-       
-                // const { 0: {id,name,description,colour}} = data.tasks;
-                
-               // console.log(`Task id: ${id}  Task Name: ${name} Task description: ${description} Task colour ${colour}`);
-               //const a = data.tasks[0];
-
-              // console.log(a);
-               
-               //console.log( tasksData);
-               // tasksData = JSON.stringify(tasksData);
-              // console.log(data.tasks[0]); 
-           /*    for (let i in tasksData) {
-                console.log(tasksData[i]["name"]);
-            } */
-
+              
               //Make Table
 
               let table = document.createElement("table");
@@ -95,8 +76,7 @@ function displayList()
                   table.appendChild(row);
                   row.appendChild(cellA);
 
-                  //console.log(data[key]);
-                  //console.log(data);
+                 
                   //Hide nested arrays
                   if(!Array.isArray(data[key]))
                   {
@@ -105,14 +85,6 @@ function displayList()
                   
                   }
                  
-/*              
-                  for(let key in tasksData)
-                  {
-                    cellC = document.createElement("td");
-                    cellC.innerHTML = tasksData[key];
-                    table.appendChild(row);
-                    row.appendChild(cellC);
-                  } */
 
               }
 
@@ -126,10 +98,7 @@ function displayList()
 
               for (let index = 0; index < data.tasks.length; index++) {
                   let element = data.tasks[index];
-                  //let a = data.tasks[0];
-                 
-               
-               //console.log(a);
+                
 
               for(let key in element)
               {
@@ -158,23 +127,7 @@ function displayList()
               
 });
              
-                      /*    response.json().then((data) =>
-                {
-                    data = JSON.stringify(data);
-                let failedText = document.querySelector("#failedDisplayListText").innerHTML = `${data}`;
-
-                    
-                }); 
-            */
-
-              /*    response.json().then((data) =>
-                {
-                    data = JSON.stringify(data);
-                let failedText = document.querySelector("#failedDisplayListText").innerHTML = `${data}`;
-
-                    
-                }); 
-            */
+                 
                 console.log("List retrieved!");
 
                 
