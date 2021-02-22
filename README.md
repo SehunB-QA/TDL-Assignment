@@ -12,11 +12,11 @@ Make sure the prerequisites are installed, ensure environment variables for Java
 
 ```
 Java 11 - Run the program
-Command Line: (CMD, Mac Terminal ) : Execute the fat Jar file and execute the program.
-SpringBoot - Run the H2 database and other spring dependecies 
-Git - Clone repo down to your local computer
+Command Line: (CMD, Mac Terminal ) : Execute the fat Jar/ WAR file and execute the program.
+SpringBoot - Run the H2 database and other spring dependencies 
+Git - Clone the repo down to your local computer
 Apache Maven - Run Unit tests
-JavaScript enabled web browser (Google Chrome is best!)  - 
+JavaScript enabled web browser (Google Chrome is best!) - Execute JavaScript scripts, also perorm the API CRUD methods with Fetch.
 Postman - Test API Requests
 Access to opening Port 9094: Where the applicaiton lives (Sends the API requests, hosts the H2 memory database) 
 ```
@@ -46,7 +46,7 @@ You can visit this  url
 ```
 http://localhost:9094/h2-console/
 ```
-Just press the test connection button to assure you have a connection, then proceed to press the connect button. After a short wait, you should be able to see two entities Tasks & ToDoList, where you can see all the table fields and such. This acts as your database, and will store infomation for the duration of the jar file.
+Just press the test connection button to assure you have a connection, then proceed to press the connect button. After a short wait, you should be able to see two entities Tasks & ToDoList, where you can see all the table fields and such. This acts as your database, and will store infomation for the duration of running the jar/WAR file.
 
 You can visit this url 
 
