@@ -37,6 +37,7 @@ java -jar TDLAssignmentBackend-0.0.1-SNAPSHOT.jar
 ```
 
 You can visit this  url 
+
 ```
 http://localhost:9094/h2-console/
 ```
@@ -182,7 +183,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 * A big thank you to my team mates:
 
 Cameron  -[CGuthrieQA](https://github.com/CGuthrieQA), 
-RaimondsCameron  -[RaimondsMezalsQA](https://github.com/RaimondsMezalsQA),
+Raimonds  -[RaimondsMezalsQA](https://github.com/RaimondsMezalsQA),
 Henry  - [QAHenryOliverEdwards](https://github.com/QAHenryOliverEdwards), 
 for all help, support and laughter during the development of this project. :)
 
