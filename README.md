@@ -35,6 +35,11 @@ Using the same git terminal or a other command line application navigate to the 
 java -jar TDLAssignmentBackend-0.0.1-SNAPSHOT.jar
 
 ```
+You can also navigate to the WAR File folder and execute the following comand to execute a WAR file
+```
+java -jar TDLAssignmentBackend-0.0.1-SNAPSHOT.war
+
+```
 
 You can visit this  url 
 
