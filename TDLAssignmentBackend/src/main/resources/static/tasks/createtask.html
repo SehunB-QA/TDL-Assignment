@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Author: Sehun Babatunde -->
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name = "author" content="Sehun Babatunde">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Create a New Task | Tasks | FireNotes</title> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a173eff550.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" type="text/css" href="/./css/style.css">
+  
+    </head>
+
+    <body>
+        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <div class="sidebar">
+    <a href="/index.html"> <i class="fas fa-home"></i> Home</a>
+    
+    <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-clipboard-list"></i> ToDoList
+    <i class="fa fa-caret-down"></i> 
+    </button>
+    <div class="dropdown-container">
+        <a href="/todolists/createlist.html"> Create ToDoList </a>
+        <a href="/todolists/updatelistname.html"> Update List Name </a>
+        <a href="/todolists/displaylist.html"> Display List </a>
+        <a href="/todolists/findlistbyname.html"> Find List By Name </a>
+        <a href="/todolists/deletelist.html"> Delete List</a>
+    </div>
+    <button class="dropdown-btn" id="dropdown-btn"> <i class="fas fa-tasks"></i> Tasks
+      <i class="fa fa-caret-down"></i> 
+      </button>
+      <div class="dropdown-container">
+          <a href="/tasks/createtask.html"> Create Task & Add to ToDoList</a>
+          <a href="/tasks/updatetask.html"> Update Task </a>
+          <a href="/tasks/displaytask.html"> Display Task </a>
+          <a href="/tasks/findtaskbycolour.html"> Find Task By Colour </a>
+          <a href="/tasks/findtaskbyname.html"> Find Task By Name</a>
+          <a href="/tasks/deletetask.html"> Delete Task</a>
+          <a href="/tasks/removetaskfromlist.html"> Remove Task from list</a>
+      </div>
+</div>
+
+<form onSubmit="return false">
+<div class="form-group" id="createtask-page">
+    <label for="taskNameLabel">Task Name</label>
+    <input type="text" class="form-control" id="taskNameInput" placeholder="Enter the name of the task you'll conquer">
+    <label for="taskcolourLabel">Task Colour</label>
+    <input type="text" class="form-control" id="taskColourInput" placeholder="Enter a nice colour to group your tasks together">
+    <label for="taskDescriptionLabel">Task Description <textarea class="form-control" id="taskDescriptionTextStringBox" name="taskDescriptionTextStringBox" placeholder="Enter a cool description..." ></textarea></label><br> 
+    <label for="taskGroupIDLabel">ToDoList ID
+    <input type="number" class="form-control" id="taskListIDInput" placeholder="Enter the ID of the list to add your task to">
+    <button type="submit" class="btn btn-primary" id="createTaskButton" >Create Task</button>
+    <p style="color: rgb(0, 126, 0); font-size:160%; font-weight: bold; "  id="createdTaskSuccessText"></p>
+    <p style="color: rgb(255, 0, 0)" id="failedCreatedTaskText"></p>
+</div> 
+
+</form>
+
+<script src="/js/script.js"></script>
+<script src="/js/JavaScriptTasks/createTask.js"></script>
+</body>
+</html>
