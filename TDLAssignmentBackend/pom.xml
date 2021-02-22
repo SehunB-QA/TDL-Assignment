@@ -9,6 +9,7 @@
 		<version>2.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<packaging>war</packaging>
 	<groupId>com.qa.tdlassignmentbackend</groupId>
 	<artifactId>TDLAssignmentBackend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -70,12 +71,13 @@
 			<version>3.0.0</version>
 		</dependency>
       <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>3.141.59</version>
+   
+   <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+        <scope>provided</scope>
     </dependency>
-  
+    
   <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 <dependency>
     <groupId>org.junit.jupiter</groupId>
