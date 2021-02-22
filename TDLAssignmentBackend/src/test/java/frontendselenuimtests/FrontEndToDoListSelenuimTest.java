@@ -43,7 +43,7 @@ private  WebDriver driver;
         toDoListTextBox.sendKeys("SHOPPING LIST");
         
         WebElement pageBackground = driver.findElement(By.xpath("/html/body/div"));
-        pageBackground.click();
+        pageBackground.click(); 
         
         WebElement createNewListButton = driver.findElement(By.xpath("/html/body/form/div/button"));
         createNewListButton.click();
