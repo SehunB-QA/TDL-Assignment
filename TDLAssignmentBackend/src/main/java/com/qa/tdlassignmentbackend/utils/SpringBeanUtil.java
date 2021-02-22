@@ -11,11 +11,7 @@ import org.springframework.beans.BeanWrapperImpl;
 
 public final class SpringBeanUtil {
 
-	
-	private SpringBeanUtil()
-	{
-		
-	}
+
 	
 	public static void mergeNotNull(Object source, Object target)
 	{

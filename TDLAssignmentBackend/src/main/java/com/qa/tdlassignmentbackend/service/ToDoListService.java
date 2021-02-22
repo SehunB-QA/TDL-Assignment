@@ -82,6 +82,7 @@ public ToDoListDTO updateList(ToDoListDTO toDoListDTO, Long id)
 	SpringBeanUtil.mergeNotNull(toDoListDTO, dataToUpdate);
 	
 	return this.mapToDTO(this.todoListRepo.save(dataToUpdate));
+	 
 	
 }
 
