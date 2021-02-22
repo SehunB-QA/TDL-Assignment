@@ -27,18 +27,41 @@ Access to opening Port 9094: Where the applicaiton lives (Sends the API requests
 ```
 git clone https://github.com/SehunB-QA/TDL-Assignment.git
 ```
+Please note to close any applications or services using port 9094 first, so this application can use it.
 
-
-Using the same git terminal or a other command line application navigate to the Fat_Jar_File foler and execute the following command : 
-
-```
-java -jar ims-0.0.1-jar-with-dependencies.jar
+Using the same git terminal or a other command line application navigate to the Fat_Jar_File folder and execute the following command : 
 
 ```
+java -jar TDLAssignmentBackend-0.0.1-SNAPSHOT.jar
+
+```
+
+You can visit this  url 
+
+```
+http://localhost:9094/h2-console/
+```
+Just press the test connection button to assure you have a connection, then proceed to press the connect button. After a short wait, you should be able to see two entities Tasks & ToDoList, where you can see all the table fields and such. This acts as your database, and will store infomation for the duration of the jar file.
+
+You can visit this url 
+
+```
+http://localhost:9094/index.html
+```
+This will bring you to the frontend website where you can perform full CRUD applcations, and use the Firenotes ToDoList application. You can navigate the site with the left side navigation bar, which are split into two sections Tasks & ToDoList to perform the required applications. 
+
+
+You can visit this url 
+
+```
+http://localhost:9094/swagger-ui/index.html
+```
+This will bring you to the Swagger provided documentation, which gives you a look at how the backend of FireNotes works, with template JSON API requests which can be tested with Postman. It also give you a link of the URL of all CRUD operations and such.
+
 
 ## Running the tests
 
-Once your repo is cloned wih the : 
+Once your repo is cloned wih this command : 
 
 ```
 git clone https://github.com/SehunB-QA/TDL-Assignment.git
@@ -72,6 +95,7 @@ Unit Tests were conducted with JUnit, Mockito & Selenium
 	}
 ```
 ### Selenium Create ToDoList On FrontEnd
+
 ```java
 @Test
 	public void createToDoListFrontEndTest() throws InterruptedException{
@@ -98,14 +122,16 @@ Unit Tests were conducted with JUnit, Mockito & Selenium
 		
 		assertEquals("List Created!", listCreatedText.getText());
 	}
-	```
+	
+ ```
 ### Postman Create Task API Request
 
 Send an POST request with Postman to the following URL. 
 Please make sure a ToDoList has been created with the correct ID to match the task to.
+
 ```
 http://localhost:9094/tasks/create
-```
+ ```
 
 ```json
 {
@@ -144,7 +170,7 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Sehun Babatunde**  - [SehunB-QA](https://github.com/SehunB-QA)
+* **Sehun Babatunde** - [SehunB-QA](https://github.com/SehunB-QA) & [SehunBaba](https://github.com/SehunBaba) 
 
 ## License
 
@@ -157,7 +183,7 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 * A big thank you to my team mates:
 
 Cameron  -[CGuthrieQA](https://github.com/CGuthrieQA), 
-RaimondsCameron  -[RaimondsMezalsQA](https://github.com/RaimondsMezalsQA),
+Raimonds  -[RaimondsMezalsQA](https://github.com/RaimondsMezalsQA),
 Henry  - [QAHenryOliverEdwards](https://github.com/QAHenryOliverEdwards), 
 for all help, support and laughter during the development of this project. :)
 
